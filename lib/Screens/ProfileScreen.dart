@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:direction_app/Colors.dart';
 
-
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-  
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
-  
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
@@ -24,130 +20,116 @@ class _ProfileScreenState extends State<ProfileScreen> {
               borderRadius: BorderRadius.circular(20),
               color: AppColors.GradientStart,
               image: DecorationImage(
-                image: AssetImage("lib/Assets/images/rector.jpg"),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.dstATop)
-                ),
+                  image: AssetImage("lib/Assets/images/rector.jpg"),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.3), BlendMode.dstATop)),
             ),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height / 1.8,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget> [
-                    Flexible(
-                      flex: 3,
-                      fit: FlexFit.loose,
-                      child: Container(
-
-                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 70),
-                      alignment: Alignment.centerLeft,
-                      child: Text('Дирекция',
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Flexible(
+                  flex: 3,
+                  fit: FlexFit.loose,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 70),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Дирекция',
                       style: TextStyle(
-                      fontSize: 30.0,color: AppColors.CardMenuColor,
+                        fontSize: 30.0,
+                        color: AppColors.CardMenuColor,
                       ),
-                      ),
-                      ),
-                      
                     ),
-                    
-                      Flexible(
-                      flex: 1,
-                      fit: FlexFit.loose,
-                      child: Container(
-                      alignment: Alignment.centerLeft,
-                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10 ),
-                      child: GestureDetector(
-                        child: Text('Гарус Михаил Викторович \n+8 (3953) 400-011',
+                  ),
+                ),
+                Flexible(
+                  flex: 1,
+                  fit: FlexFit.loose,
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: GestureDetector(
+                      child: Text(
+                        'Гарус Михаил Викторович \n+8 (3953) 400-011',
                         style: TextStyle(
                           fontSize: 20.0,
                           color: AppColors.CardMenuColor,
-                      
                         ),
-                        ),
-                        onTap: () async {
-                                            // final Uri launchUri = Uri(
-                                            //     scheme: 'tel', path: '${restaurant.tel}');
-                                            // await launch(launchUri.toString());
-                                          },
                       ),
-                                
-                       
-                      ),
+                      onTap: () async {
+                        // final Uri launchUri = Uri(
+                        //     scheme: 'tel', path: '${restaurant.tel}');
+                        // await launch(launchUri.toString());
+                      },
                     ),
-                        Container(
-                          height: 60,
-                          width: 60,
-                          margin: EdgeInsets.symmetric(vertical: 18 ),
-                          
-                          decoration: BoxDecoration(
-                            
-                              gradient: const LinearGradient(colors: [
-                                Color.fromARGB(255, 249, 249, 250),
-                                Color.fromARGB(255, 204, 204, 204)
-                              ]),
-                              
-                              borderRadius: BorderRadius.circular(100),
-                              boxShadow: []), 
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Container(
-                                child: Row(
-                                  children: <Widget>[
-                                  Padding(padding: const EdgeInsets.all(4)),
-                                  Icon(
-                                  Icons.call,
-                                  color: AppColors.GradientStart,
-                                  size: 23,
-                                  )// 'Позвонить',
-                                  // textAlign: TextAlign.center,
-                                  // style: TextStyle(
-                                  //   fontSize: 18.0,
-                                  //   color: AppColors.GradientStart
-                                  //),
-                                  ],
-                                  ),
-
-                              height: 75,
-                              width: 75,
-                              decoration: BoxDecoration(
-                                gradient: const LinearGradient(colors: [
-                                  Color.fromARGB(255, 204, 204, 204),
-                                  Color.fromARGB(255, 249, 249, 250),
-                                ]),
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              // child: Icon(
-                              //   Icons.supervised_user_circle_outlined,
-                              //   color: Colors.deepPurple[700],
-                              //   size: 50,
-                              // ),
-                            ),
-                            
-                          ),
-                          
-                        ),
-                        
-                  ],
+                  ),
                 ),
-                
+                Container(
+                  height: 60,
+                  width: 60,
+                  margin: EdgeInsets.symmetric(vertical: 18),
+                  decoration: BoxDecoration(
+                      gradient: const LinearGradient(colors: [
+                        Color.fromARGB(255, 249, 249, 250),
+                        Color.fromARGB(255, 204, 204, 204)
+                      ]),
+                      borderRadius: BorderRadius.circular(100),
+                      boxShadow: []),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Padding(padding: const EdgeInsets.all(4)),
+                          Icon(
+                            Icons.call,
+                            color: AppColors.GradientStart,
+                            size: 23,
+                          ) // 'Позвонить',
+                          // textAlign: TextAlign.center,
+                          // style: TextStyle(
+                          //   fontSize: 18.0,
+                          //   color: AppColors.GradientStart
+                          //),
+                        ],
+                      ),
+
+                      height: 75,
+                      width: 75,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(colors: [
+                          Color.fromARGB(255, 204, 204, 204),
+                          Color.fromARGB(255, 249, 249, 250),
+                        ]),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      // child: Icon(
+                      //   Icons.supervised_user_circle_outlined,
+                      //   color: Colors.deepPurple[700],
+                      //   size: 50,
+                      // ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
 
             // child: Text('ergerg',
-            // textAlign: TextAlign.start,  
+            // textAlign: TextAlign.start,
             // style: TextStyle(
             // color: AppColors.CardmenuColor,
-            
-            ),
-            Container(
+          ),
+          Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height / 20.0,
-              color: Colors.red,
-            )
+            color: Colors.red,
+          )
         ],
       ),
-        
 
-        
-        
       // child: Container(
       //   decoration: BoxDecoration(
       //     border: Border.all(),
@@ -157,21 +139,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
       //   padding: const EdgeInsets.all(0.0),
       //   child: Text('ergerg',
       //   style: TextStyle(color: AppColors.CardmenuColor),
-        //),
-          
-        //), 
+      //),
+
+      //),
 
       // backgroundColor: AppColors.CardmenuColor,
       // body: Container(
       //   width: MediaQuery.of(context).size.width,
       //   height: MediaQuery.of(context).size.height / 2.0,
-      //   decoration: BoxDecoration( 
+      //   decoration: BoxDecoration(
       //     borderRadius: BorderRadius.circular(20),
       //     color: AppColors.BGMenuColor,
       //     ),
       //     child: Text('3523'),
-    //   ),
+      //   ),
     );
   }
 }
-
