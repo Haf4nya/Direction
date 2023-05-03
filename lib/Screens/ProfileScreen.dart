@@ -24,11 +24,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               borderRadius: BorderRadius.circular(20),
               color: AppColors.GradientStart,
               image: DecorationImage(
-                image: AssetImage("flutterlogo"),
+                image: AssetImage("lib/Assets/images/rector.jpg"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.dstATop)
                 ),
             ),
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 2.2,
+            height: MediaQuery.of(context).size.height / 1.8,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget> [
@@ -37,8 +39,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fit: FlexFit.loose,
                       child: Container(
 
-                      margin: EdgeInsets.symmetric(vertical: 70),
-                      alignment: Alignment.topCenter,
+                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 70),
+                      alignment: Alignment.centerLeft,
                       child: Text('Дирекция',
                       style: TextStyle(
                       fontSize: 30.0,color: AppColors.CardMenuColor,
@@ -52,8 +54,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       flex: 1,
                       fit: FlexFit.loose,
                       child: Container(
-                      alignment: Alignment.topCenter,
-                      margin: EdgeInsets.symmetric(vertical: 10 ),
+                      alignment: Alignment.centerLeft,
+                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10 ),
                       child: GestureDetector(
                         child: Text('Гарус Михаил Викторович \n+8 (3953) 400-011',
                         style: TextStyle(
@@ -72,10 +74,59 @@ class _ProfileScreenState extends State<ProfileScreen> {
                        
                       ),
                     ),
-                    Container(width: MediaQuery.of(context).size.width / 3.0,
-            height: MediaQuery.of(context).size.height / 26.0,
-            margin: EdgeInsets.symmetric(vertical: 15 ),
-              color: Colors.amber,)
+                        Container(
+                          height: 60,
+                          width: 60,
+                          margin: EdgeInsets.symmetric(vertical: 18 ),
+                          
+                          decoration: BoxDecoration(
+                            
+                              gradient: const LinearGradient(colors: [
+                                Color.fromARGB(255, 249, 249, 250),
+                                Color.fromARGB(255, 204, 204, 204)
+                              ]),
+                              
+                              borderRadius: BorderRadius.circular(100),
+                              boxShadow: []), 
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Container(
+                                child: Row(
+                                  children: <Widget>[
+                                  Padding(padding: const EdgeInsets.all(4)),
+                                  Icon(
+                                  Icons.call,
+                                  color: AppColors.GradientStart,
+                                  size: 23,
+                                  )// 'Позвонить',
+                                  // textAlign: TextAlign.center,
+                                  // style: TextStyle(
+                                  //   fontSize: 18.0,
+                                  //   color: AppColors.GradientStart
+                                  //),
+                                  ],
+                                  ),
+
+                              height: 75,
+                              width: 75,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(colors: [
+                                  Color.fromARGB(255, 204, 204, 204),
+                                  Color.fromARGB(255, 249, 249, 250),
+                                ]),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              // child: Icon(
+                              //   Icons.supervised_user_circle_outlined,
+                              //   color: Colors.deepPurple[700],
+                              //   size: 50,
+                              // ),
+                            ),
+                            
+                          ),
+                          
+                        ),
+                        
                   ],
                 ),
                 
