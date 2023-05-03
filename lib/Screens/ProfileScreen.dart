@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:direction_app/Colors.dart';
 
-
-
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-  
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
-  
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.CardMenuColor,
+      backgroundColor: AppColors.GradientStart,
       body: Column(
         children: [
           Container(
@@ -145,6 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 gradient: const LinearGradient(colors: [
                   Color.fromARGB(137, 135, 147, 228),
                   Color.fromARGB(150, 13, 98, 172)],),
+                  color: AppColors.GradientStart, 
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(70)),
                   ),
                   
