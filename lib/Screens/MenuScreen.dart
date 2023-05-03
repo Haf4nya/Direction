@@ -18,8 +18,7 @@ class _MenuScreenState extends State<MenuScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-                child: Column(
+            Column(
               children: [
                 Container(
                   height: 20,
@@ -28,25 +27,41 @@ class _MenuScreenState extends State<MenuScreen> {
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white),
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 0.2,
-                  height: MediaQuery.of(context).size.height / 4,
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        Color.fromARGB(255, 135, 147, 228),
-                        Color.fromARGB(255, 10, 99, 177)
-                      ]),
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black45,
-                            spreadRadius: 1,
-                            blurRadius: 10,
-                            offset: Offset(7, 7))
-                      ]),
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 0.2,
+                        height: MediaQuery.of(context).size.height / 4,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              Color.fromARGB(255, 135, 147, 228),
+                              Color.fromARGB(255, 10, 99, 177)
+                            ]),
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  spreadRadius: 1,
+                                  blurRadius: 10,
+                                  offset: Offset(7, 7))
+                            ]),
+                      ),
+                    ),
+                    Positioned(
+                        height: 50,
+                        width: 50,
+                        top: -20,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.amber,
+                              borderRadius: BorderRadius.circular(20)),
+                        ))
+                  ],
                 ),
               ],
-            ))
+            )
           ],
         ),
       ),
