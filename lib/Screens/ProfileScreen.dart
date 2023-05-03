@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(70)),
               color: AppColors.GradientStart,
               image: DecorationImage(
                 image: AssetImage("lib/Assets/images/rector.jpg"),
@@ -30,7 +30,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
             ),
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 1.8,
+            height: MediaQuery.of(context).size.height / 2.0,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget> [
@@ -39,7 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fit: FlexFit.loose,
                       child: Container(
 
-                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 70),
+                      margin: EdgeInsets.symmetric(horizontal: 20,vertical: 60),
                       alignment: Alignment.centerLeft,
                       child: Text('Дирекция',
                       style: TextStyle(
@@ -77,7 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Container(
                           height: 60,
                           width: 60,
-                          margin: EdgeInsets.symmetric(vertical: 18 ),
+                          margin: EdgeInsets.symmetric(vertical: 10 ),
                           
                           decoration: BoxDecoration(
                             
@@ -138,9 +138,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             
             ),
             Container(
+              alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 20.0,
-              color: Colors.red,
+            height: MediaQuery.of(context).size.height / 2,
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(colors: [
+                  Color.fromARGB(137, 135, 147, 228),
+                  Color.fromARGB(150, 13, 98, 172)],),
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(70)),
+                  ),
+                  
             )
         ],
       ),
