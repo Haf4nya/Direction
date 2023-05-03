@@ -16,48 +16,87 @@ class _MenuScreenState extends State<MenuScreen> {
       backgroundColor: AppColors.BGColor,
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
               children: [
-                Container(
-                  height: 20,
-                  width: 20,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white),
-                ),
                 Stack(
                   clipBehavior: Clip.none,
                   children: [
                     Positioned(
-                      child: Container(
-                        width: MediaQuery.of(context).size.width / 0.2,
-                        height: MediaQuery.of(context).size.height / 4,
-                        decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              Color.fromARGB(255, 135, 147, 228),
-                              Color.fromARGB(255, 10, 99, 177)
-                            ]),
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black45,
-                                  spreadRadius: 1,
-                                  blurRadius: 10,
-                                  offset: Offset(7, 7))
-                            ]),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 50, 8, 0),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height / 5,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                Color.fromARGB(137, 135, 147, 228),
+                                Color.fromARGB(150, 13, 98, 172)
+                              ]),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black45,
+                                    spreadRadius: 1,
+                                    blurRadius: 10,
+                                    offset: Offset(7, 7))
+                              ]),
+                        ),
                       ),
                     ),
                     Positioned(
+                        left: 125,
                         height: 50,
-                        width: 50,
-                        top: -20,
+                        width: 200,
+                        top: 25,
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Colors.amber,
+                              gradient: const LinearGradient(colors: [
+                                Color.fromARGB(255, 204, 204, 204),
+                                Color.fromARGB(255, 249, 249, 250),
+                              ]),
                               borderRadius: BorderRadius.circular(20)),
-                        ))
+                          child: Center(
+                            child: Text('Дирекция',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 13, 98, 172),
+                                    fontSize: 25)),
+                          ),
+                        )),
+                    Positioned(
+                        left: 12,
+                        top: 10,
+                        child: Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              gradient: const LinearGradient(colors: [
+                                Color.fromARGB(255, 249, 249, 250),
+                                Color.fromARGB(255, 204, 204, 204)
+                              ]),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: []),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Container(
+                              height: 75,
+                              width: 75,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(colors: [
+                                  Color.fromARGB(255, 204, 204, 204),
+                                  Color.fromARGB(255, 249, 249, 250),
+                                ]),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Icon(
+                                Icons.supervised_user_circle_outlined,
+                                color: Color.fromARGB(255, 13, 98, 172),
+                                size: 60,
+                              ),
+                            ),
+                          ),
+                        )),
                   ],
                 ),
               ],
@@ -68,8 +107,6 @@ class _MenuScreenState extends State<MenuScreen> {
     );
   }
 }
-
-
 
 // child: Column(
 //             children: [
