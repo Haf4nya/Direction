@@ -11,6 +11,7 @@ class ListMenuScreen extends StatefulWidget {
 }
 
 class _ListMenuScreenState extends State<ListMenuScreen> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,12 +57,12 @@ class _ListMenuScreenState extends State<ListMenuScreen> {
                                 padding: const EdgeInsets.all(2.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(100),
-                                      image: DecorationImage(
-                                        image: Image.asset(
-                                            snapshot.direction[index]['photo']),
+                                    borderRadius: BorderRadius.circular(100),
+                                    image: DecorationImage(
+                                        image: Image.asset(direction[index].photo),
                                         fit: BoxFit.cover,
-                                      )),
+                                      )
+                                  ),
                                   child: Stack(
                                     clipBehavior: Clip.none,
                                     children: [
