@@ -24,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: MediaQuery.of(context).size.height / 2.0,
                 decoration: BoxDecoration(
                   //Смена цвета верхнего правого уголка
-                  color: Colors.grey[350],
+                  color: Colors.grey[100],
                 ),
               ),
               Container(
@@ -92,86 +92,84 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 color: Colors.grey[350],
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(70),
-                )
-              ),
-              //Контейнер кнопки телефона
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20, left: 30),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Container(
-                    width: MediaQuery.of(context).size.width / 7.6,
-                    height: MediaQuery.of(context).size.height / 15,
-
-
-                    //Включить при разраьботке нижнего контейнера  
-                    //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
-                    
-
-                    //Контейнер иконки телефонаы
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white70
-                        ),
-                        borderRadius: BorderRadius.all(Radius.circular(60),
-                        ),
-
-                        color: Colors.white70,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.9),
-                              spreadRadius: 3,
-                              blurRadius: 1,
-                              offset: Offset(0, 0.5), 
-                          ),
-                          ],
-                        ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 13),
-                        child: Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.call,
-                              color: Colors.black,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    ),
                 ),
               ),
+              //Контейнер кнопки телефона
+              // child: Padding(
+              //   padding: const EdgeInsets.only(top: 20, left: 30),
+              //   child: Align(
+              //     alignment: Alignment.topLeft,
+              //     child: Container(
+              //       width: MediaQuery.of(context).size.width / 7.6,
+              //       height: MediaQuery.of(context).size.height / 16,
+
+
+              //       //Включить при разраьботке нижнего контейнера  
+              //       //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
+                    
+
+              //       //Контейнер иконки телефонаы
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //           border: Border.all(
+              //             color: Colors.white70
+              //           ),
+              //           borderRadius: BorderRadius.all(Radius.circular(60),
+              //           ),
+
+              //           color: Colors.white70,
+              //           boxShadow: [
+              //             BoxShadow(
+              //               color: Colors.grey.withOpacity(0.9),
+              //                 spreadRadius: 3,
+              //                 blurRadius: 1,
+              //                 offset: Offset(0, 0.5), 
+              //             ),
+              //             ],
+              //           ),
+              //         child: Padding(
+              //           padding: const EdgeInsets.only(left: 13),
+              //           child: Row(
+              //             children: <Widget>[
+              //               Icon(
+              //                 Icons.call,
+              //                 color: Colors.black,
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //       ),
+              //   ),
+              // ),
             ),
             
           ),
           // Текст для первого контейнера
-          Padding(
-            padding: const EdgeInsets.only(top: 90, left: 0),
-            child: Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 10.5,
-                decoration: BoxDecoration(
-                  //Смена цвета нижнего контейнера
-
-
-                  //Включить при разраьботке нижнего контейнера  
-                  //color: Colors.red.withOpacity(0.3),
-
-
-                  // borderRadius: BorderRadius.only(
-                  //   //topLeft: Radius.circular(70),
-                  // )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 150 ),
-                  child: Center(
-                    child: Text(
-                      'Вызов',
-                      style: TextStyle(fontSize: 16),
-                      ),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 90, left: 0),
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 8.7,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(70) ),
+                    //Смена цвета нижнего контейнера
+                    //color: Colors.grey[100],
+          
+                    //Включить при разраьботке нижнего контейнера  
+                    color: Colors.red.withOpacity(0.3),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 150 ),
+                    child: Center(
+                      child: Text(
+                        'Вызов',
+                        style: TextStyle(fontSize: 16),
+                        ),
+                    ),
                   ),
                 ),
               ),
@@ -184,7 +182,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           
           // Второй контейнер
           Padding(
-            padding: const EdgeInsets.only(top: 240, left: 0),
+            padding: const EdgeInsets.only(top: 260, left: 0),
             child: Align(
               alignment: Alignment.center,
               child: Container(
@@ -196,7 +194,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   
 
                   //Включить при разраьботке нижнего контейнера  
-                  //color: Colors.red.withOpacity(0.3),
+                  color: Colors.red.withOpacity(0.3),
 
 
 
@@ -216,7 +214,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       
                       
                       //Включить при разраьботке нижнего контейнера  
-                      //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
+                      decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
                       
 
 
