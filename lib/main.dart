@@ -1,5 +1,5 @@
-import 'package:direction_app/Screens/MenuScreen.dart';
-import 'package:direction_app/Screens/ProfileScreen.dart';
+import 'package:direction_app/screens/MenuScreen.dart';
+import 'package:direction_app/screens/ProfileScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
