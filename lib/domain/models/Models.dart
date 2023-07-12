@@ -7,10 +7,6 @@ class Direction {
   Direction(this.name, this.post, this.photo);
 }
 
-const String? garus = "lib/Assets/images/rector.jpg";
-const String? konovalova = "lib/Assets/images/konovalova.jpg";
-const String? orlova = 'lib/Assets/images/orlova.jpg';
-
 class MainMenu {
   String department;
   String member;
@@ -39,17 +35,15 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            icon,
-            size: 55,
-            color: Colors.blueGrey[600],
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 45,
+          color: Colors.blueGrey[600],
+        ),
+      ],
     );
   }
 }

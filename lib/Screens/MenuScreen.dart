@@ -17,6 +17,7 @@ class _MenuScreenState extends State<MenuScreen> {
         backgroundColor: AppColors.BGColor,
         appBar: AppBar(
           title: Text('dsfsdfs'),
+          backgroundColor: Colors.blueGrey[900],
         ),
         body: ListView.builder(
             itemCount: mainMenu.length,
