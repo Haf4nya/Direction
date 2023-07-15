@@ -27,17 +27,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: Colors.grey[350],
                 ),
               ),
-              Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2,
-              decoration: BoxDecoration(
-                //Смена цвета нижнего левого уголка
-                color: Color.fromARGB(255, 59, 78, 87),
-              ),
-            ),
-          ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.0,
@@ -77,13 +66,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),),
                       ),
                     ),
-                    Align()
                   ],
                 ),
               ),
             ],
           ),
-          
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height / 2,
+              decoration: BoxDecoration(
+                //Смена цвета нижнего левого уголка
+                color: Color.fromARGB(255, 59, 78, 87),
+              ),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -165,6 +163,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     //color: Colors.red.withOpacity(0.3),
                     
                   ),
+                  // child: Padding(
+                  //   padding: const EdgeInsets.only(right: 160 ),
+                  //   child: Center(
+                  //     child: Text(
+                  //       'Вызов',
+                  //       style: TextStyle(fontSize: 17, color: AppColors.GradientStart),
+                  //       ),
+                  //   ),
+                  // ),
                 ),
               ),
             ),
