@@ -1,3 +1,4 @@
+import 'package:direction_app/screens/ListMenuScreen.dart';
 import 'package:direction_app/screens/MenuScreen.dart';
 import 'package:direction_app/screens/ProfileScreen.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MenuScreen());
+    return MaterialApp(home: ProfileScreen());
   }
 }

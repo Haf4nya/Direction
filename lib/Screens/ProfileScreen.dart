@@ -24,9 +24,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: MediaQuery.of(context).size.height / 2.0,
                 decoration: BoxDecoration(
                   //Смена цвета верхнего правого уголка
-                  color: Colors.grey[100],
+                  color: Colors.grey[350],
                 ),
               ),
+              Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height / 2,
+              decoration: BoxDecoration(
+                //Смена цвета нижнего левого уголка
+                color: Color.fromARGB(255, 59, 78, 87),
+              ),
+            ),
+          ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.0,
@@ -42,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Column(
                   children: <Widget> [
                     Padding(
-                      padding: const EdgeInsets.only(top: 280, left: 30),
+                      padding: const EdgeInsets.only(top: 295, left: 30),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
@@ -66,22 +77,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),),
                       ),
                     ),
+                    Align()
                   ],
                 ),
               ),
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2,
-              decoration: BoxDecoration(
-                //Смена цвета нижнего левого уголка
-                color: Color.fromARGB(255, 59, 78, 87),
-              ),
-            ),
-          ),
+          
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -95,53 +97,53 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               //Контейнер кнопки телефона
-              // child: Padding(
-              //   padding: const EdgeInsets.only(top: 20, left: 30),
-              //   child: Align(
-              //     alignment: Alignment.topLeft,
-              //     child: Container(
-              //       width: MediaQuery.of(context).size.width / 7.6,
-              //       height: MediaQuery.of(context).size.height / 16,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 170),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 8,
+                    height: MediaQuery.of(context).size.height / 16,
 
 
-              //       //Включить при разраьботке нижнего контейнера  
-              //       //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
+                    //Включить при разраьботке нижнего контейнера  
+                    //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
                     
 
-              //       //Контейнер иконки телефонаы
-              //       child: Container(
-              //         decoration: BoxDecoration(
-              //           border: Border.all(
-              //             color: Colors.white70
-              //           ),
-              //           borderRadius: BorderRadius.all(Radius.circular(60),
-              //           ),
+                    //Контейнер иконки телефонаы
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white70
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(60),
+                        ),
 
-              //           color: Colors.white70,
-              //           boxShadow: [
-              //             BoxShadow(
-              //               color: Colors.grey.withOpacity(0.9),
-              //                 spreadRadius: 3,
-              //                 blurRadius: 1,
-              //                 offset: Offset(0, 0.5), 
-              //             ),
-              //             ],
-              //           ),
-              //         child: Padding(
-              //           padding: const EdgeInsets.only(left: 13),
-              //           child: Row(
-              //             children: <Widget>[
-              //               Icon(
-              //                 Icons.call,
-              //                 color: Colors.black,
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //       ),
-              //   ),
-              // ),
+                        color: Colors.white70,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.9),
+                              spreadRadius: 3,
+                              blurRadius: 1,
+                              offset: Offset(0, 0.5), 
+                          ),
+                          ],
+                        ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11),
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.call,
+                              color: Colors.black,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    ),
+                ),
+              ),
             ),
             
           ),
@@ -160,16 +162,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     //color: Colors.grey[100],
           
                     //Включить при разраьботке нижнего контейнера  
-                    color: Colors.red.withOpacity(0.3),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 150 ),
-                    child: Center(
-                      child: Text(
-                        'Вызов',
-                        style: TextStyle(fontSize: 16),
-                        ),
-                    ),
+                    //color: Colors.red.withOpacity(0.3),
+                    
                   ),
                 ),
               ),
@@ -181,82 +175,105 @@ class _ProfileScreenState extends State<ProfileScreen> {
           
           
           // Второй контейнер
-          Padding(
-            padding: const EdgeInsets.only(top: 260, left: 0),
-            child: Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 10.5,
-                decoration: BoxDecoration(
-                  //Смена цвета нижнего контейнера
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 254, left: 0),
+          //   child: Align(
+          //     alignment: Alignment.center,
+          //     child: Container(
+          //       width: MediaQuery.of(context).size.width,
+          //       height: MediaQuery.of(context).size.height / 10.5,
+          //       decoration: BoxDecoration(
+          //         //Смена цвета нижнего контейнера
                   
                   
 
-                  //Включить при разраьботке нижнего контейнера  
-                  color: Colors.red.withOpacity(0.3),
+          //         //Включить при разраьботке нижнего контейнера  
+          //         //color: Colors.red.withOpacity(0.3),
 
 
 
-                  borderRadius: BorderRadius.only(
-                    //topLeft: Radius.circular(70),
-                  )
-                ),
-                //Контейнер кнопки телефона
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10.5, left: 30),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width / 7.6,
-                      height: MediaQuery.of(context).size.height / 15,
+          //         borderRadius: BorderRadius.only(
+          //           //topLeft: Radius.circular(70),
+          //         )
+          //       ),
+          //       //Контейнер кнопки телефона
+          //       child: Padding(
+          //         padding: const EdgeInsets.only(top: 10.5, left: 30),
+          //         child: Align(
+          //           alignment: Alignment.topLeft,
+          //           child: Container(
+          //             width: MediaQuery.of(context).size.width / 7.6,
+          //             height: MediaQuery.of(context).size.height / 15,
                       
                       
                       
-                      //Включить при разраьботке нижнего контейнера  
-                      decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
+          //             //Включить при разраьботке нижнего контейнера  
+          //             //decoration: BoxDecoration(color: Colors.red.withOpacity(0.7)),
                       
 
 
 
-                      //Контейнер иконки телефонаы
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.white70
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(60),
-                          ),
+          //             //Контейнер иконки телефонаы
+          //             // child: Container(
+          //             //   decoration: BoxDecoration(
+          //             //     border: Border.all(
+          //             //       color: Colors.white70
+          //             //     ),
+          //             //     borderRadius: BorderRadius.all(Radius.circular(60),
+          //             //     ),
           
-                          color: Colors.white70,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.9),
-                                spreadRadius: 3,
-                                blurRadius: 1,
-                                offset: Offset(0, 0.5), 
-                            ),
-                            ],
-                          ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 13),
-                          child: Row(
-                            children: <Widget>[
-                              Icon(
-                                Icons.call,
-                                color: Colors.black,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      ),
-                  ),
-                ),
-              ),
-              
+          //             //     color: Colors.white70,
+          //             //     boxShadow: [
+          //             //       BoxShadow(
+          //             //         color: Colors.grey.withOpacity(0.9),
+          //             //           spreadRadius: 3,
+          //             //           blurRadius: 1,
+          //             //           offset: Offset(0, 0.5), 
+          //             //       ),
+          //             //       ],
+          //             //     ),
+          //             //   child: Padding(
+          //             //     padding: const EdgeInsets.only(left: 13),
+          //             //     child: Row(
+          //             //       children: <Widget>[
+          //             //         Icon(
+          //             //           Icons.call,
+          //             //           color: Colors.black,
+          //             //         ),
+          //             //       ],
+          //             //     ),
+          //             //   ),
+          //             // ),
+          //             ),
+          //         ),
+          //       ),
+                
+          //     ),
+            
+          //   ),
+          // ),
+          Padding(
+          padding: const EdgeInsets.only(top: 460),
+          child: Divider(
+            height: 25,
+            thickness: 2,
+            indent: 5,
+            endIndent: 5,
             ),
           ),
+
+        //Информация
+
+        Padding(
+        padding: const EdgeInsets.only(top:480 , left: 10),
+        child: Text(
+        'График работы: с 8.00 до 17.00 \nПерерыв: с 12.00 до 13.00 \n\nТел (факс): 8 (3953) 400-011 \n\nE-mail: bcbk@brstu.ru' ,
+        style: TextStyle(
+        fontSize: 21,
+        color: AppColors.GradientStart,
+        ),
+        ),
+        ),
         ],
       ),
     ),

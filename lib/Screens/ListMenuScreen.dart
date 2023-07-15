@@ -58,10 +58,10 @@ class _ListMenuScreenState extends State<ListMenuScreen> {
                                 child: Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100),
-                                    image: DecorationImage(
-                                        image: Image.asset(direction[index].photo),
-                                        fit: BoxFit.cover,
-                                      )
+                                    // image: DecorationImage(
+                                    //     image: Image.asset(direction[index].photo) as ImageProvider, 
+                                    //     fit: BoxFit.cover,
+                                    //   )
                                   ),
                                   child: Stack(
                                     clipBehavior: Clip.none,
