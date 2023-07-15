@@ -4,7 +4,17 @@ class Direction {
   String name;
   String post;
   String photo;
-  Direction(this.name, this.post, this.photo);
+  String scheduleStart;
+  //DateTime scheduleEnd;
+  //DateTime breakStart;
+  //DateTime breakEnd;
+  Direction(
+    this.name,
+    this.post,
+    this.photo,
+    this.scheduleStart,
+    /*this.scheduleEnd, this.breakStart, this.breakEnd*/
+  );
 }
 
 class MainMenu {
@@ -16,13 +26,32 @@ class MainMenu {
 
 final List<Direction> direction = <Direction>[
   Direction(
-      'Гарус Михаил Викторович', 'Директор', 'lib/Assets/images/rector.jpg'),
-  Direction('Коновалова Людмила Михайловна', 'Зам. директора по учебной работе',
-      'lib/Assets/images/konovalova.jpg'),
+    'Гарус Михаил Викторович',
+    'Директор',
+    'lib/Assets/images/rector.jpg',
+    "08:00:00", //Начало рабочего дня
+    /*DateTime.parse("17:00:00"), //Конец рабочего дня
+      DateTime.parse("12:00:00"), //Начало обеда
+      DateTime.parse("13:00:00")*/
+  ), //Конец обеда
   Direction(
-      'Орлова Раиса Александровна',
-      'Зам. директора по профобучению\n и трудоустройству',
-      'lib/Assets/images/orlova.jpg'),
+    'Коновалова Людмила Михайловна',
+    'Зам. директора по учебной работе',
+    'lib/Assets/images/konovalova.jpg',
+    "08:00:00", //Начало рабочего дня
+    /*DateTime.parse("16:12:00"), //Конец рабочего дня
+      DateTime.parse("12:00:00"), //Начало обеда
+      DateTime.parse("13:00:00")*/
+  ), //Конец обеда
+  Direction(
+    'Орлова Раиса Александровна',
+    'Зам. директора по профобучению\n и трудоустройству',
+    'lib/Assets/images/orlova.jpg',
+    "08:00:00", //Начало рабочего дня
+    /*DateTime.parse("16:12:00"), //Конец рабочего дня
+      DateTime.parse("12:00:00"), //Начало обеда
+      DateTime.parse("13:00:00")*/
+  ), //Конец обеда
 ];
 
 // иконки для добавления в BoxDecoration
